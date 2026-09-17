@@ -20,3 +20,4 @@ class TaskCreate(BaseModel):
 class Task(TaskCreate):
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     created_at: str = Field(default_factory=lambda: datetime.utcnow().isoformat() + "Z")
+    
